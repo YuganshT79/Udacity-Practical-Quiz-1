@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:elevation="8dp"
+                android:theme="@style/ToolBarStyle">
+
+            </android.support.v7.widget.Toolbar>
+
+            <com.github.florent37.arclayout.ArcLayout
+                android:id="@+id/arc_layout"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_below="@id/toolbar"
+                android:elevation="8dp"
+                app:arc_cropDirection="cropOutside"
+                app:arc_height="60dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/gradient" />
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/avatar" />
+
+                </RelativeLayout>
+
+            </com.github.florent37.arclayout.ArcLayout>
+
+            <ImageView
+                android:id="@+id/bg_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/arc_layout"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/arc_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:text="Demo UserName"
+                android:textStyle="bold"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/user_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/username"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:text="demouser@demo.com"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/user_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_email"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:text="@string/user_info"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

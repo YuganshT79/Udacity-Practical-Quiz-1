@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Udacity Practical Quiz 1</string>
+
+    <string name="user_info">This is some demo description about the user, it will be replaced by real user info</string>
+</resources>
